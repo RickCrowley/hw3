@@ -11,7 +11,17 @@ function pageLoad() {
   // these variables map to the elements on the finished page;
   // assign the proper value to each variable
 
-  levelOfService = 'Pizza'
+  if (ride.length > 1) {
+    levelOfService = 'Noober Pool'
+  } else if (ride[0].numberOfPassengers > 3) {
+    levelOfService = 'Noober XL'
+  } else if (ride.purpleRequest = true) {
+    levelOfService = 'Noober Purple'
+  }  else {
+    levelOfService = 'Noober X'
+  }
+
+  console.log(ride[0].numberOfPassengers)
 
   let firstName1 = ride[0].passengerDetails.first
   let lastName1 = ride[0].passengerDetails.last
@@ -20,7 +30,7 @@ function pageLoad() {
     
   passenger1Phone = ride[0].passengerDetails.phoneNumber
   
-  passenger1NumberOfPassengers = ride[0].passenger1NumberOfPassengers
+  passenger1NumberOfPassengers = ride[0].numberOfPassengers
   
   passenger1PickupAddressLine1 = ride[0].pickupLocation.address
 
@@ -37,7 +47,7 @@ function pageLoad() {
     
   passenger2Phone = ride[1].passengerDetails.phoneNumber
   
-  passenger2NumberOfPassengers = ride[1].passenger2NumberOfPassengers
+  passenger2NumberOfPassengers = ride[1].numberOfPassengers
   
   passenger2PickupAddressLine1 = ride[1].pickupLocation.address
 
@@ -54,7 +64,7 @@ function pageLoad() {
     
   passenger3Phone = ride[2].passengerDetails.phoneNumber
   
-  passenger3NumberOfPassengers = ride[2].passenger2NumberOfPassengers
+  passenger3NumberOfPassengers = ride[2].numberOfPassengers
   
   passenger3PickupAddressLine1 = ride[2].pickupLocation.address
 
@@ -63,8 +73,6 @@ function pageLoad() {
   passenger3DropoffAddressLine1 = ride[2].dropoffLocation.address
 
   passenger3DropoffAddressLine2 = ride[2].dropoffLocation.city +', '+ ride[2].dropoffLocation.state +' '+ ride[2].dropoffLocation.zip
-
-  // levelOfService
   
   //  👆 YOUR CODE ENDS HERE. DON'T CHANGE ANY OTHER CODE 👆
 }
